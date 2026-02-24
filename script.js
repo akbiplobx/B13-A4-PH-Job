@@ -13,9 +13,21 @@ const rejectFilterBtn = document.getElementById('reject-filter-btn');
 const allCardSection = document.getElementById('allCards');
 const mainContainer = document.querySelector('main');
 const filterSection = document.getElementById('filtered-section');
+const totalCounter = document.getElementById("totalCounter");
 
+
+
+// delet
+filterSection.addEventListener("click", function (e) {
+  if (e.target.closest(".btn-delete")) {
+    const card = e.target.closest(".card");
+    card.remove(); // 
+  }
+});
 
 // counts
+totalCounter.innerText = allCardSection.children.length;
+
 
 function calculateCount() {
     // Count only real job cards, ignore "No Jobs Available"
