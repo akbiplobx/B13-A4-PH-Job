@@ -47,6 +47,47 @@
             <button onclick="toggleStyle('reject-filter-btn')"  class="bg-white rounded px-5 py-2" id="reject-filter-btn">Rejected</button>
         </div>
 <!-- toggle btn end -->
+  <!-- Filter card start-->
+        <section id="filtered-section" class="hidden">
+
+        </section>
+        <!-- Filter card end-->
+         <!-- all card section start-->
+         <section id="allCards" class="space-y-6">
+ <!-- card 1 -->
+            <div class="card flex justify-between rounded p-8 bg-white">
+                <!-- main part 1 -->
+                <div class="space-y-6">
+                    <!-- part 1 -->
+                    <div>
+                        <p class="cardTitle text-xl font-bold">Mobile First Corp</p>
+                        <p class="cardSubTitle">React Native Developer</p>
+                    </div>
+
+                    <!-- part 2 -->
+                    <div class="flex gap-2">
+                        <p class="">Remote  •  Full-time  •  $130,000 - $175,000</p>
+                    </div>
+                    <!-- part 3 -->
+                     <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
+                     <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+
+                     <div class="flex gap-5">
+                        <button class="interview-btn border-2 border-green-400 text-green-400 font-bold px-3 py-1 rounded cursor-pointer">Interview</button>
+                        <button class="reject-btn border-2 border-red-400 text-red-400 font-bold px-3 py-1 rounded cursor-pointer">Rejected</button>
+                     </div>
+                </div>
+
+                <!-- main part 2 -->
+                <div>
+                    <button class="btn-delete rounded-full h-10 border-gray-100 bg-white w-10 border p-1 justify-center cursor-pointer"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+
+
+         </section>
+         <!-- all card section end-->
     </main>
 </body>
 </html>
