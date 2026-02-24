@@ -30,7 +30,7 @@ totalCounter.innerText = allCardSection.children.length;
 
 
 function calculateCount() {
-    // Count only real job cards, ignore "No Jobs Available"
+    // Count only job crd, ignore "othrs"
     const cards = Array.from(allCardSection.children).filter(
         card => !card.classList.contains('empty-card')
     );
@@ -39,7 +39,7 @@ function calculateCount() {
     rejectCount.innerText = rejectedList.length;
 }
 
-// Call once initially
+// Call once 
 calculateCount();
 
 
@@ -55,14 +55,14 @@ function toggleStyle(id) {
     interviewFilterBtn.classList.remove('bg-blue-500', 'text-white');
     rejectFilterBtn.classList.remove('bg-blue-500', 'text-white');
 
-    // Add style selected
+    // Add style selectedd
     const selected = document.getElementById(id);
     selected.classList.remove('bg-white', 'text-black');
     selected.classList.add('bg-blue-500', 'text-white');
 
     currentStatus = id;
 
-    // Show or hide sections based
+    // Show or hide section 
     if (id === 'interview-filter-btn') {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden');
@@ -77,8 +77,7 @@ function toggleStyle(id) {
     }
 }
 
-// Event delegate
-
+// Event deleg
 mainContainer.addEventListener('click', function(event) {
     const card = event.target.closest('.card');
     if (!card || card.classList.contains('empty-card')) return;
@@ -107,7 +106,8 @@ mainContainer.addEventListener('click', function(event) {
 
         if (currentStatus === 'interview-filter-btn') renderInterview();
     } else if (event.target.classList.contains('btn-delete')) {
-        // Remove from lists
+       
+        // Rmve frm lst
         interviewList = interviewList.filter(j => j.jobTitle !== jobTitle);
         rejectedList = rejectedList.filter(j => j.jobTitle !== jobTitle);
 
