@@ -16,7 +16,14 @@ const filterSection = document.getElementById('filtered-section');
 const totalCounter = document.getElementById("totalCounter");
 
 
-
+// ===============
+allCardSection.addEventListener("click", function (e) {
+  if (e.target.closest(".btn-delete")) {
+    const card = e.target.closest(".card");
+    card.remove(); // 
+  }
+});
+// ===============
 // delet
 filterSection.addEventListener("click", function (e) {
   if (e.target.closest(".btn-delete")) {
@@ -24,7 +31,6 @@ filterSection.addEventListener("click", function (e) {
     card.remove(); // 
   }
 });
-
 // counts
 totalCounter.innerText = allCardSection.children.length;
 
@@ -38,9 +44,21 @@ function calculateCount() {
     interviewCount.innerText = interviewList.length;
     rejectCount.innerText = rejectedList.length;
 }
-
 // Call once 
 calculateCount();
+
+function calculateCount() {
+    const cards = Array.from(allCardSection.children).filter(
+     card => !card.classList.contains('empty-card')
+    );
+    const totalJobs = cards.length;
+
+    total.innerText = totalJobs;
+    interviewCount.innerText = interviewList.length;
+    rejectCount.innerText = rejectedList.length;
+
+    totalCounter.innerText = totalJobs;
+}
 
 
 // Toggle
