@@ -7,24 +7,25 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./responsive.css">
 </head>
 <body class="bg-gray-100">
     <header class="w-[80%] mx-auto">
         <h1 class="text-4xl font-bold my-6">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div class="bg-white p-4 my-5 rounded ">
                 <p>Total</p>
-                <p id="total" class="text-2xl font-bold">0</p>
+                <p id="total" class="text-2xl font-bold ">0</p>
             </div>
 
             <div class="bg-white p-4 my-5 rounded ">
                 <p>Interview</p>
-                <p id="interviewCount" class="text-2xl font-bold">0</p>
+                <p id="interviewCount" class="text-2xl font-bold text-green-500">0</p>
             </div>
 
             <div class="bg-white p-4 my-5 rounded ">
                 <p>Rejected</p>
-                <p id="rejectCount" class="text-2xl font-bold">0</p>
+                <p id="rejectCount" class="text-2xl font-bold text-red-500">0</p>
             </div>
         </div>
     </header>
@@ -41,7 +42,7 @@
          <!-- available job section end -->
         
         <!-- toggle btn start-->
-<div class="mb-6">
+<div class="mb-6 flex flex-wrap gap-2 sm:flex-row flex-col">
             <button onclick="toggleStyle('all-filter-btn')"  class="bg-blue-500 rounded text-white px-5 py-2" id="all-filter-btn">All</button>
             <button onclick="toggleStyle('interview-filter-btn')"  class="bg-white rounded px-5 py-2" id="interview-filter-btn">Interview</button>
             <button onclick="toggleStyle('reject-filter-btn')"  class="bg-white rounded px-5 py-2" id="reject-filter-btn">Rejected</button>
@@ -58,17 +59,17 @@
             <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">Mobile First Corp</p>
                         <p class="cardSubTitle">React Native Developer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">Remote  •  Full-time  •  $130,000 - $175,000</p>
                     </div>
-                    <!-- part 3 -->
+                    
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
 
@@ -88,17 +89,17 @@
  <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">WebFlow Agency</p>
                         <p class="cardSubTitle">Web Designer & Developer</p>
                     </div>
 
-                    <!-- part 2 -->
+                   
                     <div class="flex gap-2">
                         <p class="">Los Angeles, CA " Part-time " $80,000 - $120,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
 
@@ -117,17 +118,17 @@
 <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">DataViz Solutions</p>
                         <p class="cardSubTitle">Data Visualization Specalist</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">Boston, MA " Full-time " $125,000 - $165,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
 
@@ -146,17 +147,17 @@
              <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">CloudFirst Inc</p>
                         <p class="cardSubTitle">Backend Developer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">Seattle, WA • Full-time • $140,000 - $190,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
 
@@ -175,17 +176,17 @@
              <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">Innovation Labs</p>
                         <p class="cardSubTitle">UI/UX Engineer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">Austin, TX • Full-time • $110,000 - $150,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
 
@@ -204,17 +205,17 @@
              <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">MegaCorp Solutions</p>
                         <p class="cardSubTitle">JavaScript Developer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">New York, NY • Full-time • $130,000 - $170,00</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
 
@@ -233,17 +234,17 @@
               <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">StartupXYZ</p>
                         <p class="cardSubTitle">Full Stack Engineer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">Remote • Full-time • $120,000 - $160,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
 
@@ -262,17 +263,17 @@
               <div class="card flex justify-between rounded p-8 bg-white">
                 <!-- main part 1 -->
                 <div class="space-y-6">
-                    <!-- part 1 -->
+                    
                     <div>
                         <p class="cardTitle text-xl font-bold">TechCorp Industries</p>
                         <p class="cardSubTitle">Senior Frontend Developer</p>
                     </div>
 
-                    <!-- part 2 -->
+                    
                     <div class="flex gap-2">
                         <p class="">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     </div>
-                    <!-- part 3 -->
+                   
                      <button class="status light bg-gray-200 px-4 py-2 rounded">Not Applied</button>
                      <p class="notes">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
 
